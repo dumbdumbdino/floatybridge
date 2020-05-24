@@ -1,11 +1,21 @@
 const server = require('express')();
 const http = require('http').createServer(server);
 const io = require('socket.io')(http);
+
+
+/*
+const PORT = process.env.PORT || 5000;
+const INDEX = '/index.html';
+
+
+const server = express()
+  .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
+  .listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+*/
+
 let players = [];
-
 let playedCards = 0;
-let playedObjects = [];
-
 
 let deck=[
     'a2','a3','a4','a5','a6','a7','a8','a9','a10','a11','a12','a13', 'a14',
@@ -22,16 +32,13 @@ function shuffle(array) {
     }
   }
 
-  var jointext = "";
-
-
+ 
 io.on('connection', function (socket) {
     locplayerNo = players.length +1;
 
     io.to(socket.id).emit('PlayerNo', locplayerNo);
     
     playerJoin = "Player " + locplayerNo + " connected: " + socket.id;
-    jointext += playerJoin + '\r\n';
     console.log(playerJoin);
 
     players.push(socket.id);
