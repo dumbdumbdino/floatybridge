@@ -98,6 +98,14 @@ export default class Game extends Phaser.Scene {
             self.playerCards = playerCards;
             self.dealer.dealCards(self.playerCards);
 
+            for (let i = 0; i < self.playerCards.length; i++)
+            {
+                let cardSprite = self.playerCards[i];
+                let playerCard = new Card(scene);
+                playerCard.render(450+ (i * 35), 775, cardSprite);
+            }
+
+
             self.startText.destroy();
 
             self.add.text(1000,800, 
