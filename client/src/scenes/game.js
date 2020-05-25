@@ -51,6 +51,8 @@ export default class Game extends Phaser.Scene {
        
         let self = this;
 
+        //this.socket = io('http://localhost:3000');
+
         this.socket = io('https://floatybridge-server.herokuapp.com/');
 
         this.socket.on('connect', function () {
@@ -147,8 +149,7 @@ export default class Game extends Phaser.Scene {
 
             }
 
-            
-
+        
 
             if (self.playerNo == 1) {
                 if (playerNo ==2) {self.opponentCardsB.shift().destroy();}

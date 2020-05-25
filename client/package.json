@@ -4,10 +4,9 @@
     "description": "Game Client Side",
     "main": "src/index.js",
     "scripts": {
-      "dev": "webpack-dev-server --mode development --open",
-      "start": "node server.js",
-      "heroku-postbuild": "webpack -p"
-     
+      "build": "webpack --config webpack/prod.js ",
+      "start": "webpack-dev-server --config webpack/base.js --open",
+      "heroku-postbuild": "webpack -p --config webpack/prod.js "
     },
         "devDependencies": {
       "@babel/core": "^7.7.2",
