@@ -3,9 +3,6 @@ import Card from '../helpers/card';
 import Dealer from "../helpers/dealer";
 import Zone from '../helpers/zone';
 
-import PlayerB from '../helpers/playerB';
-import PlayerC from '../helpers/playerC';
-import PlayerD from '../helpers/playerD';
 import { GameObjects } from 'phaser';
 
 export default class Game extends Phaser.Scene {
@@ -163,25 +160,25 @@ export default class Game extends Phaser.Scene {
 
 
             if (self.playerNo == 2) {
-                if (playerNo ==3) {self.opponentCardsB.shift().destroy();}
+            if (playerNo ==3) {self.opponentCardsB.shift().destroy();}
+            
+            if (playerNo ==4) {self.opponentCardsC.shift().destroy();}
+            if (playerNo ==1) {self.opponentCardsD.shift().destroy();}
+                }
+
+                if (self.playerNo == 3) {
+                if (playerNo ==4) {self.opponentCardsB.shift().destroy();}
                 
-                if (playerNo ==4) {self.opponentCardsC.shift().destroy();}
-                if (playerNo ==1) {self.opponentCardsD.shift().destroy();}
-                 }
+                if (playerNo ==1) {self.opponentCardsC.shift().destroy();}
+                if (playerNo ==2) {self.opponentCardsD.shift().destroy();}
+                    }
 
-                 if (self.playerNo == 3) {
-                    if (playerNo ==4) {self.opponentCardsB.shift().destroy();}
-                    
-                    if (playerNo ==1) {self.opponentCardsC.shift().destroy();}
-                    if (playerNo ==2) {self.opponentCardsD.shift().destroy();}
-                     }
-
-                     if (self.playerNo == 4) {
-                        if (playerNo ==1) {self.opponentCardsB.shift().destroy();}
-                        
-                        if (playerNo ==2) {self.opponentCardsC.shift().destroy();}
-                        if (playerNo ==3) {self.opponentCardsD.shift().destroy();}
-                         }
+                if (self.playerNo == 4) {
+                if (playerNo ==1) {self.opponentCardsB.shift().destroy();}
+                
+                if (playerNo ==2) {self.opponentCardsC.shift().destroy();}
+                if (playerNo ==3) {self.opponentCardsD.shift().destroy();}
+                    }
                 
         })
 
