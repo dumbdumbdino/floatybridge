@@ -13,16 +13,16 @@ export default class Game extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('cardbackvert', 'src/assets/cardback_vert.png');
-        this.load.image('cardbackleft', 'src/assets/cardback_horleft.png');
-        this.load.image('cardbackright', 'src/assets/cardback_horright.png');
+        this.load.image('cardbackvert', 'assets/cardback_vert.png');
+        this.load.image('cardbackleft', 'assets/cardback_horleft.png');
+        this.load.image('cardbackright', 'assets/cardback_horright.png');
 
         for (let i=2; i <= 14; i++)
         {
-            this.load.image('a'+i, 'src/assets/' + 'a' + i +'.png');
-            this.load.image('b'+i, 'src/assets/' + 'b' + i +'.png');
-            this.load.image('c'+i, 'src/assets/' + 'c' + i +'.png');
-            this.load.image('d'+i, 'src/assets/' + 'd' + i +'.png');
+            this.load.image('a'+i, 'assets/' + 'a' + i +'.png');
+            this.load.image('b'+i, 'assets/' + 'b' + i +'.png');
+            this.load.image('c'+i, 'assets/' + 'c' + i +'.png');
+            this.load.image('d'+i, 'assets/' + 'd' + i +'.png');
         }
     }
 
