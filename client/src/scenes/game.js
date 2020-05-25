@@ -41,7 +41,6 @@ export default class Game extends Phaser.Scene {
         this.opponentCardsC = [];
         this.opponentCardsD = [];
 
-
         this.zone = new Zone(this);
         this.dropZone = this.zone.renderZone();
         this.outline = this.zone.renderOutline(this.dropZone);
@@ -52,7 +51,7 @@ export default class Game extends Phaser.Scene {
        
         let self = this;
 
-        this.socket = io('http://localhost:3000');
+        this.socket = io('https://floatybridge-server.herokuapp.com/');
 
         this.socket.on('connect', function () {
             console.log('Connected!');
