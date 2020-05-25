@@ -96,7 +96,7 @@ export default class Game extends Phaser.Scene {
         this.socket.on('showCards', function (playerCards) {
            
             self.playerCards = playerCards;
-            self.dealer.dealCards(playerCards);
+            self.dealer.dealCards(sself.playerCards);
 
             self.startText.destroy();
 
