@@ -18,7 +18,7 @@ export default class Dealer {
             for (let i = 0; i < 13; i++) {
                 let cardSprite = playerCards[i];
                 let playerCard = new Card(scene);
-                playerCard.render(450+ (i * 35), 775, cardSprite);
+                playerCard.render(450+ (i * 35), 775, opponentSpriteC);
 
                 // B vertical
                 let opponentCardB = new Card(scene);
