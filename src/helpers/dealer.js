@@ -3,7 +3,7 @@ import Card from './card';
 
 export default class Dealer {
     constructor(scene) {
-        this.dealCards = () => {
+        this.dealCards = (playerCards) => {
             let opponentSpriteB;
             let opponentSpriteC;
             let opponentSpriteD;
@@ -13,10 +13,19 @@ export default class Dealer {
             opponentSpriteD = 'cardbackleft';
 
          
+    
+
+            for (let i = 0; i < playerCards.length; i++)
+            {
+                let cardSprite = self.playerCards[i];
+                let playerCard = new Card(scene);
+                playerCard.render(450+ (i * 35), 775, cardSprite);
+            }
 
 
             for (let i = 0; i < 13; i++) {
                 
+
                 // B vertical
                 let opponentCardB = new Card(scene);
                 
