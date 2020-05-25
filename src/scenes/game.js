@@ -96,12 +96,12 @@ export default class Game extends Phaser.Scene {
         this.socket.on('showCards', function (playerCards) {
            
             self.playerCards = playerCards;
-            self.dealer.dealCards(self.playerCards);
+            self.dealer.dealCards();
 
             for (let i = 0; i < self.playerCards.length; i++)
             {
                 let cardSprite = self.playerCards[i];
-                let playerCard = new Card(scene);
+                let playerCard = new Card(this);
                 playerCard.render(450+ (i * 35), 775, cardSprite);
             }
 

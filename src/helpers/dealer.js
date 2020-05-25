@@ -3,7 +3,7 @@ import Card from './card';
 
 export default class Dealer {
     constructor(scene) {
-        this.dealCards = (playerCards) => {
+        this.dealCards = () => {
             let opponentSpriteB;
             let opponentSpriteC;
             let opponentSpriteD;
